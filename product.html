@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Products</title>
+
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <nav>
+        <header>
+            <div class="logo">
+            <a href="index.html"><img src="trooper.png" alt="" id="logo"/></a>
+            <span>
+                <img src="amazon.png" alt="ama" id="ama-logo"/>
+                <h2>Partner</h2> 
+            </span>
+            </div>
+            <ul class="nav-btns">
+                <li><a href="product.html">Amazon Products</a></li>
+                <li><a href="trending.html">Trending Blogs</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" id="input" data-input/>
+                <img src="search.png" alt="search" id="search"/> 
+            </div>
+            <div class="menu-items">
+            <img src="menu.png" alt="" id="menu"/>
+            <img src="close (1).png" alt="" id="x"/>
+            </div>
+        </header>
+    </nav>
+    <main>
+        <div class="links">
+            <a href="product.html"><h2>Amazon Products</h2></a>
+            <a href="trending.html"><h2>Trending Blogs</h2></a>
+        </div>
+      <div class="wrap-p">
+      <div class="head-p">
+          <h1>Essential Products</h1>
+          <span><p>sponsered by</p>
+            <img src="amazon.png" alt='ama' id="ama-logo"/>
+         </span>
+      </div>
+      <div class="products-p">
+        <div class="prod">
+          <a href="#" target="_blank" class="anchor">
+          <div class="pod">
+            <div class="img-p">
+            <img src="social.png" alt="amazon" class="link-p" id="i1"/>
+            <img src="product1.jpg" alt="product" class="p1-p"/>
+            </div>
+            <span>
+            <h2>Product Title</h2>
+            <p>Product Description</p>
+            </span>
+        </div>
+        </a>
+        <a href="#" target="_blank" class="anchor">
+        <div class="pod">
+            <div class="img-p">
+            <img src="social.png" alt="amazon" class="link-p" id="i2"/>
+            <img src="product1.jpg" alt="product" class="p1-p"/>
+            </div>
+            <span>
+            <h2>Product Title</h2>
+            <p>Product Description</p>
+            </span>
+        </div>
+        </a>
+        <a href="#" target="_blank" class="anchor">
+        <div class="pod">
+            <div class="img-p">
+            <img src="social.png" alt="amazon" class="link-p" id="i3"/>
+            <img src="product1.jpg" alt="product" class="p1-p"/>
+            </div>
+            <span>
+            <h2>Product Title</h2>
+            <p>Product Description</p>
+            </span>
+        </div>
+        </a>
+        <a href="#" target="_blank" class="anchor">
+        <div class="pod">
+        <div class="img-p">
+          <img src="social.png" alt="amazon" class="link-p" id="i4"/>
+          <img src="product1.jpg" alt="product" class="p1-p"/>
+          </div>
+          <span>
+          <h2>Product Title</h2>
+          <p>Product Description</p>
+          </span>
+      </div>
+      </a>
+      <a href="#" target="_blank" class="anchor">
+      <div class="pod">
+        <div class="img-p">
+            <img src="social.png" alt="amazon" class="link-p" id="i5"/>
+          <img src="product1.jpg" alt="product" class="p1-p"/>
+        </div>
+          <span>
+          <h2>Product Title</h2>
+          <p>Product Description</p>
+          </span>
+      </div>
+      </a>
+      <a href="#" target="_blank" class="anchor">
+      <div class="pod">
+        <div class="img-p">
+            <img src="social.png" alt="amazon" class="link-p" id="i6"/>
+          <img src="product1.jpg" alt="product" class="p1-p"/>
+        </div>
+          <span>
+          <h2>Product Title</h2>
+          <p>Product Description</p>
+          </span>
+      </div>
+      </a>
+    </div>
+    </div>
+      <div class="paginate">
+          <img src="left-arrow.png" id="left" alt="arrow"/>
+          <h2>Pages 1/2</h2>
+          <img src="right-arrow.png" id="right" alt="arrow"/>
+      </div> 
+    </main>
+    <footer>
+        <div class="icons">
+            <h2>Social & Affailiate Links</h2>
+            <span>
+               <a href="#"><img src="social.png" alt="" id="ama"/></a>
+               <a href="https://www.facebook.com/profile.php?id=100092228024406&mibextid=LQQJ4d"><img src="facebook (1).png" alt="" id="ama"/></a>
+               <a href="https://www.tiktok.com/@mylittletrooper"><img src="tik-tok.png" alt="" id="ama"/></a>
+            </span>
+        </div>
+        <div class="footer-logo">
+           <a href="index.html"><img src="trooper.png" alt="" id="foot-logo"/></a>
+        </div>
+        <div class="footer-nav">
+            <ul>
+                <li class="li-items"><a href="product.html">Amazon Products</a></li>
+                <li class="li-items"><a href="trending.html">Trending Blogs</a></li>
+                <li class="li-items"><a href="about.html">About Us</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        const right = document.getElementById('right'); 
+const left = document.getElementById('left'); 
+const parentEl = Array.from(document.querySelectorAll('.img-p'));
+const h2 = Array.from(document.querySelectorAll('.pod span h2')); 
+const p = Array.from(document.querySelectorAll('.pod span p'));
+const anchor = Array.from(document.querySelectorAll('.anchor'));
+
+console.log(parentEl)
+
+let count = 1; 
+let totalPages = 2; 
+
+
+class Page{
+   constructor(img,h1,p,a){
+      this.img = img; 
+      this.h1 = h1; 
+      this.p = p;
+      this.a = a; 
+   }
+}
+const page1 = new Page(
+   //Img
+   ['product1.jpg','product2.jpg','product3.jpg','product4.jpg',
+    'product5.jpg', 'product6.jpg']
+//Title
+   , ['Fisher Price Deluxe Seat', '192-Inch Baby Gate', 'Skip Hop 3in1',
+'BRICA Booster Seat','C&H Portable Swing','Baby Merlins Magic SleepSuit']
+//Desc
+   , ['Fisher-Price Deluxe Sit-Me-UP Floor Seat with Toy Tray Happy Hills',
+'Regalo 192-Inch Super Wide Adjustable Baby Gate and Play Yard, 4-In 1, Bonus Kit',
+'Skip Hop 3-in-1 Baby Activity Push Walker to Toddler Scooter, Zoo Unicorn', 
+'BRICA Travel Booster Seat', 'Comfort & Harmony Portable Swing, Cozy Kingdom', 
+'Baby Merlin\'s Magic Sleepsuit- Swaddle Transition Product'],
+//Links 
+['https://amzn.to/41Jkm3Y','https://amzn.to/3URcYRO','https://amzn.to/3AeZ0jh'
+,'https://amzn.to/43SQCDm','https://amzn.to/41rbccy','https://amzn.to/3owi5uA']); 
+
+const page2 = new Page(
+   //Img
+   ['product7.jpg','product8.jpg','product9.jpg','product10.jpg'
+,'product11.jpg','product12.jpg'],
+  //Title
+   ['Regalo Extra Tall Baby Gate','Nuby Floating Purple Octopus','Dream On Me Cradle Mattress',
+'Banister-to-Banister Gate', 'Fisher-Price Portable Chair', 'Disney Baby Finding Nemo Jumper'],
+//Desc
+   ['Regalo Home Accents Extra Tall and Wide Walk Thru Baby Gate, 4-Inch Extention Kit', 
+'Nuby Floating Purple Octopus with 3 Hoopla Rings Interactive Bath Toy',
+'Dream On Me 2-Inch Foam Cradle Mattress White', 
+'Summer-Banister-to-Banister Gate Mounting Kit Fits-Round or Square Banisters', 
+'Fisher-Price Portable Baby & Toddler Dining Chair, Healthy Care Deluxe Booster Seat',
+'Disney Baby Finding Nemo Sea of Activities Jumper'],
+//Links 
+['https://amzn.to/3LhJZU1','https://amzn.to/43Uv3SX','https://amzn.to/3H2982n',
+'https://amzn.to/3KSPR4B','https://amzn.to/3oxzt23','https://amzn.to/3KX8fcv']
+)
+
+
+   function fillPage(...arr){
+      const img = Array.from(document.querySelectorAll('.p1-p')); 
+      let elements = [img,h2,p,anchor]; 
+
+      for(let i = 0; i < elements.length; i++){
+         if(i === 0){
+            for(let n = 0; n < elements[i].length; n++){
+               let newImg = document.createElement('img'); 
+               newImg.setAttribute('src',[...arr][i][n]); 
+               newImg.className = 'p1-p'; 
+
+               parentEl[n].replaceChild(newImg,elements[i][n]); 
+            }
+         }else if(i === 3){
+            console.log(elements[i])
+            for(let m = 0; m < elements[i].length; m++){
+               elements[i][m].setAttribute('href',[...arr][i][m])
+            }
+         } else {
+         for(let j = 0; j < elements[i].length; j++){
+            elements[i][j].innerHTML = [...arr][i][j]; 
+         }
+      }
+      }
+   }
+   
+   document.addEventListener('DOMContentLoaded', () =>{
+      fillPage(page1.img,page1.h1,page1.p,page1.a); 
+      right.addEventListener('click', () =>{ 
+         fillPage(page2.img,page2.h1,page2.p,page2.a); 
+         if(count < 2){
+         count++; 
+         }; 
+         
+         count > totalPages ? count = 1 : count; 
+       
+         document.querySelector('.paginate h2').innerText = `Pages ${count}/${totalPages}`; 
+       });
+       
+       left.addEventListener('click', () =>{
+
+         if(count > 1){
+          count--; 
+          document.querySelector('.paginate h2').innerText = `Pages ${count}/${totalPages}`; 
+          fillPage(page1.img,page1.h1,page1.p,page1.a); 
+         }
+       });
+   });
+
+
+    </script>
+</body>
+</html>
